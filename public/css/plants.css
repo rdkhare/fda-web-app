@@ -1,0 +1,16 @@
+body {
+    /* fallback for old browsers */
+    background: #c1dfc4;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(193, 223, 196, 1), rgba(232, 236, 174, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(193, 223, 196, 1), rgba(232, 236, 174, 1));  
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}

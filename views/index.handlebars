@@ -1,1 +1,45 @@
+
+
 <h1 class = "text-center mb-3">{{title}}</h1>
+
+<div class="input-group mb-3"> <input id ="searchBar" type="text" class="form-control" placeholder="Search HDS">
+    <div class="input-group-append">
+        <button class="btn btn-primary">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</div>
+
+ <script>
+    $(document).ready(function(){
+    $("#searchBar").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("a").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+    });
+</script> 
+{{!-- <div class="list-group" id="linkContainer"> --}}
+    {{#each HDS}}
+        {{#if this.HDS_Name includeZero=true}}
+            <a href = "/{{this.HDS_Name}}" ><div class="card mb-3 border-changer">
+  <img class="card-img-top" src="{{this.Img_tox}}" alt="Loading...">
+  <div class="card-body hds-card">
+    <h5 class="card-title">{{this.HDS_Name}}</h5>
+    <p class="card-text" id="card-summary">
+        {{#checkLength this.Summary_tox 120}}
+            {{trimString this.Summary_tox}}
+        {{else}}
+            {{this.Summary_tox}}
+        {{/checkLength}}
+    </p>
+    <br><p class="card-text"><small class="text-muted">Source: Wikipedia.org</small></p>
+  </div>
+</div>
+            </a>
+        {{/if}}
+    {{/each}}
+
+    
+{{!-- </div> --}}
