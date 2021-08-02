@@ -74,7 +74,7 @@ for (var ind in HDS) {
 // console.log(dictsArray);
 
 app.get('/', (req, res) => res.render('index', {
-    title: 'HerbalTox',
+    title: 'LiverTox',
     HDS,
     style: "style.css"
 }));
