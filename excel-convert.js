@@ -10,7 +10,7 @@ const resultJSON = excelToJSON({
 
 let firstKeys = Object.keys(resultJSON);
 
-let cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"];
+let cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "AB"];
 
 for (var i = 0; i < firstKeys.length; i++) {
     let aCol = resultJSON[firstKeys[i]][0]["A"];
@@ -29,7 +29,7 @@ for (var i = 0; i < firstKeys.length; i++) {
     let nCol = resultJSON[firstKeys[i]][0]["N"];
     let oCol = resultJSON[firstKeys[i]][0]["O"];
     let pCol = resultJSON[firstKeys[i]][0]["P"];
-    let qCol = resultJSON[firstKeys[i]][0]["P"];
+    let qCol = resultJSON[firstKeys[i]][0]["Q"];
     let rCol = resultJSON[firstKeys[i]][0]["R"];
     let sCol = resultJSON[firstKeys[i]][0]["S"];
     let tCol = resultJSON[firstKeys[i]][0]["T"];
@@ -38,8 +38,13 @@ for (var i = 0; i < firstKeys.length; i++) {
     let wCol = resultJSON[firstKeys[i]][0]["W"];
     let xCol = resultJSON[firstKeys[i]][0]["X"];
     let yCol = resultJSON[firstKeys[i]][0]["Y"];
+    let zCol = resultJSON[firstKeys[i]][0]["Z"];
+    let aaCol = resultJSON[firstKeys[i]][0]["AA"];
+    let abCol = resultJSON[firstKeys[i]][0]["AB"];
 
-    let vals = [aCol, bCol, cCol, dCol, eCol, fCol, gCol, hCol, iCol, jCol, kCol, lCol, mCol, nCol, oCol, pCol, qCol, rCol, sCol, tCol, uCol, vCol, wCol, xCol, yCol];
+
+
+    let vals = [aCol, bCol, cCol, dCol, eCol, fCol, gCol, hCol, iCol, jCol, kCol, lCol, mCol, nCol, oCol, pCol, qCol, rCol, sCol, tCol, uCol, vCol, wCol, xCol, yCol, zCol, aaCol, abCol];
 
     for (var key in resultJSON[firstKeys[i]]) {
         if (key != 0) {

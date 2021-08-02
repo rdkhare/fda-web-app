@@ -1,8 +1,8 @@
 
 
-<h1 class = "text-center mb-3" style="margin-top: 50px;">{{title}}</h1>
+<h1 class = "text-center mb-3" style ="margin-top: 50px;">{{title}}</h1>
 
-<div class="input-group mb-3"> <input id ="searchBar" type="text" class="form-control" placeholder="Search HDS">
+<div class="input-group mb-3"> <input id ="searchBar" type="text" class="form-control" placeholder="Search Cases">
     <div class="input-group-append">
         <button class="btn btn-primary">
             <i class="fas fa-search"></i>
@@ -14,31 +14,25 @@
     $(document).ready(function(){
     $("#searchBar").on("keyup", function() {
         var value = $(this).val().toLowerCase();
-        $("a.link-hds").filter(function() {
+        $("a.link-cases").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
     });
 </script> 
 {{!-- <div class="list-group" id="linkContainer"> --}}
-    {{#each HDS}}
+    {{#each cases}}
         {{#if this.HDS_Name includeZero=true}}
-            <a class="link-hds"href = "/{{this.HDS_Name}}" >
+            <a class="link-cases" href = "/{{this.HDS_Name}}_case" >
             <div class="card mb-3 border-changer">
   <div class="card-body hds-card">
     
-    <img style="float: right; margin: 0px; height:300px; width:300px; object-fit:cover;" src="{{this.Img_tox}}" alt="Loading...">
-
     <h3 class="card-title">{{this.HDS_Name}}</h3> <br>
     
     <p class="card-text" id="card-summary">
-        {{#checkLength this.Summary_tox 120}}
-            {{trimString this.Summary_tox}}
-        {{else}}
-            {{this.Summary_tox}}
-        {{/checkLength}}
+        {{this.Patient_ID}}
     </p>
-    <br><p class="card-text"><small class="text-muted">Source: Wikipedia.org</small></p>
+    <br><p class="card-text">{{this.PubMed_ID}}</p>
   </div>
 </div>
             </a>

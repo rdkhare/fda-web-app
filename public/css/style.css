@@ -37,17 +37,6 @@ p {
     font-size:30px;
 }
 
-a {
-  /* fallback for old browsers */
-  background: #c1dfc4;
-
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, rgba(193, 223, 196, 1), rgba(222, 236, 221, 1));
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgba(193, 223, 196, 1), rgba(222, 236, 221, 1));
-}
-
 
 h3 {
     display:inline;
@@ -80,7 +69,7 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
-
+/*
 .hds-card {
     /* background: #c1dfc4;
 
@@ -88,8 +77,8 @@ a, a:hover, a:focus, a:active {
     /* background: -webkit-linear-gradient(to right, rgba(193, 223, 196, 1), rgba(222, 236, 221, 1));
   
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* background: linear-gradient(to right, rgba(193, 223, 196, 1), rgba(222, 236, 221, 1)); */
-}
+    /* background: linear-gradient(to right, rgba(193, 223, 196, 1), rgba(222, 236, 221, 1)); 
+}*/
 
 .border-changer {
     border-color: rgb(118, 168, 84);

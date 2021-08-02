@@ -1,16 +1,63 @@
 body {
-    /* fallback for old browsers */
     background: #c1dfc4;
   
-    /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(193, 223, 196, 1), rgba(232, 236, 174, 1));
   
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(193, 223, 196, 1), rgba(232, 236, 174, 1));  
+    background: linear-gradient(to right, rgba(193, 223, 196, 1), rgba(232, 236, 174, 1));   
+
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Atractylis_comosa.jpg/600px-Atractylis_comosa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  */
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+li.title-ref {
+    font-size: 20px;
+    list-style: decimal;
+    padding-left: 0;
+    text-align: left !important;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+div.public-info {
+    text-align: left !important;
+    font-size: 25px;
+    list-style: decimal;
+    padding-left: 0;
+    text-align: left !important;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a.home {
+    color:black;
+}
+
+h4 {
+    text-align: left; 
+    font-size: 35px;
 }
 
 .card-img-top {
     width: 100%;
     height: 15vw;
-    object-fit: cover;
+    object-fit: scale-down;
+}
+
+p {
+    font-size: 25px;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.card-text {
+    font-weight: normal;
+    font-size: 80px;
 }

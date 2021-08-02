@@ -1,6 +1,81 @@
-<div class="card text-center" style="width: 100%;">
-  <img class="card-img-top" src="{{new_HDS.Img_tox}}" alt="Card image cap">
+
+<div class="card text-center" style="width: 100%; margin-top:80px;">
+    <img class="card-img-top" src="{{new_HDS.Img_tox}}" alt="">
+    <div class="card-text">{{new_HDS.HDS_Name}}</div>
+    <hr>
   <div class="card-body">
-    <p class="card-text">{{new_HDS.HDS_Name}}</p>
+    <div>
+        <h4>Common name</h4>
+        <p>{{new_HDS.Other_common_names}}</p>
+    </div>
+    <div>
+        <h4>ID</h4>
+        <p>{{new_HDS.ID}}</p>
+    </div>
+    <div>
+        <h4>Scientific name of the plant</h4>
+        <p>{{new_HDS.Botanical_name}}</p>
+    </div>
+    <div>
+        <h4>Anatomical part for use</h4>
+        <p>{{new_HDS.[Anatomical part of the plant]}}</p>
+    </div>
+    <div>
+        <h4>Human use</h4>
+        <p>{{new_HDS.Human_use}}</p>
+    </div>
+    <div>
+        <h4>Summary</h4>
+        <p>{{new_HDS.Summary_tox}}</p>
+    </div>
+    <div>
+        <h4>Evidence Level</h4>
+        <p>{{new_HDS.Evidence_level}}</p>
+    </div>
+    {{#if new_referencesArr.length}}
+    <div>
+        <h4>Hepatotoxicity reports in literature</h4>
+        <ul>
+            {{#each new_referencesArr}}
+                <li class="title-ref">{{title}} : (<a href={{reference}}>Source</a>)</li>
+            {{/each}}
+         </ul>
+    </div>
+    {{/if}}
+    <div>
+        <h4>Hepatotoxicity Description</h4>
+        <p>{{new_HDS.LiverTox_summary}}</p>
+    </div>
+    {{#each new_dictsArr}}
+        <h4>{{title}}</h4>
+        <p>{{content}}</p>
+    {{/each}}
+    <div class = "public-info">
+        <h4>Relevant Public Information</h4>
+        {{#ifnoteq new_HDS.Wiki_Link "N/A"}}
+            <a href= {{new_HDS.Wiki_Link}}>Wiki</a>
+            <br>
+        {{/ifnoteq}}
+        {{#ifnoteq new_HDS.EMA_Link "N/A"}}
+            <a href= {{new_HDS.EMA_Link}}>EMA</a>
+            <br>
+        {{/ifnoteq}}
+        {{#ifnoteq new_HDS.NIH_MedlinePlus "N/A"}}
+            <a href= {{new_HDS.NIH_MedlinePlus}}>NIH MedlinePlus</a>
+            <br>
+        {{/ifnoteq}}
+        {{#ifnoteq new_HDS.ODS_Link "N/A"}}
+            <a href= {{new_HDS.ODS_Link}}>NIH ODS</a>
+            <br>
+        {{/ifnoteq}}
+        {{#ifnoteq new_HDS.LiverTox_Link "N/A"}}
+            <a href= {{new_HDS.LiverTox_Link}}>NIH LiverTox</a>
+            <br>
+        {{/ifnoteq}}
+        {{#ifnoteq new_HDS.TRC_Link "N/A"}}
+            <a href= {{new_HDS.TRC_Link}}>Nature Medicines</a>
+            <br>
+        {{/ifnoteq}}
+    </div>
   </div>
 </div>

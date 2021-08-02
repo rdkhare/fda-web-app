@@ -1,0 +1,40 @@
+.custom-nav {
+    background:transparent;
+    color:black;
+}
+
+.custom-ul a{
+    color:black;
+    opacity: 60%;
+}
+
+.custom-ul a:hover{
+    color:black;
+    opacity: 100%;
+}
+
+.custom-ul a.active{
+    color:black;
+    opacity: 100%;
+}
+
+.navbar {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    height:70px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.navbar.scrolled {
+    background: white;
+    color:black;
+    opacity: 1.0;
+}
+
+.navbar.border-bottom {
+    border-width: 2px !important;
+    transition: none !important;
+}
