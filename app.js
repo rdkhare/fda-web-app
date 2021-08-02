@@ -212,11 +212,16 @@ app.use('/api', require('./routes/api/hds-data'))
 
 // https setup
 
-https.createServer({
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert')
-  }, app)
-  .listen(process.env.PORT || 3000, () => console.log(`Server started on https://localhost:${port}`));
+// https.createServer({
+//     key: fs.readFileSync('server.key'),
+//     cert: fs.readFileSync('server.cert')
+//   }, app)
+//   .listen(process.env.PORT || 3000, () => console.log(`Server started on https://localhost:${port}`));
+
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
+  
 
 // Set static folder
 app.use(express.static('public'));
