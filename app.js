@@ -216,7 +216,7 @@ https.createServer({
     key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('server.cert')
   }, app)
-  .listen(port, () => console.log(`Server started on https://localhost:${port}`));
+  .listen(process.env.PORT || 3000, () => console.log(`Server started on https://localhost:${port}`));
 
 // Set static folder
 app.use(express.static('public'));
