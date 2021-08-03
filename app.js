@@ -77,7 +77,7 @@ for (var ind in HDS) {
 // console.log(dictsArray);
 
 app.get('/', (req, res) => res.render('index', {
-    title: 'LiverTox',
+    title: 'HDSTox',
     HDS,
     style: "style.css",
     path: "home",
@@ -167,7 +167,7 @@ for (const index in HDS) {
 // console.log(referencesArr);
 
 app.get('/cases', (req, res) => res.render('cases', {
-    title: 'LiverTox',
+    title: 'HDSTox',
     cases,
     style: "style.css",
     path: "cases",
