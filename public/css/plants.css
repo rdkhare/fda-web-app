@@ -1,10 +1,11 @@
 body {
     background: #c1dfc4;
   
-    background: -webkit-linear-gradient(to right, rgba(193, 223, 196, 1), rgba(232, 236, 174, 1));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(216, 231, 183, 1), rgba(232, 236, 174, 1));
   
-    background: linear-gradient(to right, rgba(193, 223, 196, 1), rgba(232, 236, 174, 1));   
-
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(216, 231, 183, 1), rgba(232, 236, 174, 1));
     /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Atractylis_comosa.jpg/600px-Atractylis_comosa.jpg);
     background-repeat: no-repeat;
     background-size: cover;  */
@@ -22,7 +23,9 @@ li.title-ref {
     line-height: 1.5;
 }
 
-
+.card {
+    border-color: green;
+}
 
 a.title-ref {
     text-align: left !important;

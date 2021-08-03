@@ -30,7 +30,23 @@
     </div>
     <div>
         <h4>Evidence Level</h4>
-        <p>{{new_HDS.Evidence_level}}</p>
+        <p>
+        {{#ifEquals new_HDS.Evidence_level "Level 0"}}
+            Level 0 (No convinced report of liver injury caused by herbal and dietary supplement)
+        {{/ifEquals}}
+        {{#ifEquals new_HDS.Evidence_level "Level 1"}}
+            Level 1 (Individual reports from one medical center)
+        {{/ifEquals}}
+        {{#ifEquals new_HDS.Evidence_level "Level 2"}}
+            Level 2 (Independent reports from multiple medical centers)
+        {{/ifEquals}}
+        {{#ifEquals new_HDS.Evidence_level "Level 3"}}
+            Level 3 (Independent reports from different countries)
+        {{/ifEquals}}
+        {{#ifEquals new_HDS.Evidence_level "Level 4"}}
+            Level 4 (Individual reports repeated observed over 5 years among different countries)
+        {{/ifEquals}}
+        </p>
     </div>
     {{#if new_referencesArr.length}}
     <div>
