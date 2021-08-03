@@ -1,8 +1,24 @@
 
 <div class="card text-center" style="width: 100%; margin-top:80px;">
+    <img class="card-img-top" src="{{img_a}}" alt="">
     <div class="card-text">{{case_hds.HDS_Name}}</div>
     <hr>
   <div class="card-body">
-   
+      <div>
+          <h4>Patient ID</h4>
+          <p>{{case_hds.Patient_ID}}</p>
+      </div>
+      <div>
+          <h4>HDS Type</h4>
+          <p>{{case_hds.HDS_Type}}</p>
+      </div>
+      <div class = "public-info">
+          <h4>Reference</h4>
+          <a class = "title-ref" href = {{case_hds.Reference}}>{{case_hds.Title}}</a>
+      </div>
+      <div>
+          <h4>ID</h4>
+          <p>{{case_hds.ID}}</p>
+      </div>
   </div>
 </div>

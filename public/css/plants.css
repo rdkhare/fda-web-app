@@ -22,6 +22,15 @@ li.title-ref {
     line-height: 1.5;
 }
 
+
+
+a.title-ref {
+    text-align: left !important;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 2;
+}
+
 div.public-info {
     text-align: left !important;
     font-size: 25px;

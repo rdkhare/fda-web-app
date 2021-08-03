@@ -25,7 +25,10 @@ app.engine('handlebars', exphbs(
                 return options.fn(this); 
             }
             return options.inverse(this);
-        }
+        },
+        ifEquals: function(arg1, arg2, options) {
+            return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+        },
     }}
     ));
 app.set('view engine', 'handlebars');
@@ -76,7 +79,8 @@ for (var ind in HDS) {
 app.get('/', (req, res) => res.render('index', {
     title: 'LiverTox',
     HDS,
-    style: "style.css"
+    style: "style.css",
+    path: "home",
 }));
 
 // End Homepage Route
@@ -163,20 +167,43 @@ for (const index in HDS) {
 // console.log(referencesArr);
 
 app.get('/cases', (req, res) => res.render('cases', {
-    title: 'HerbalTox',
+    title: 'LiverTox',
     cases,
-    style: "style.css"
+    style: "style.css",
+    path: "cases",
 }));
+
+function findNameIndex(name) {
+    for (const num in HDS) {
+        if (num != 0) {
+            let hds_name = HDS[num]["HDS_Name"];
+            if (hds_name.toLowerCase() === name.toLowerCase()) {
+                return num;
+            }
+        }
+    }
+}
 
 for (const index in cases) {
     if (index != 0) {
         let name = cases[index]["HDS_Name"];
         let case_hds = cases[index];
-        let new_name = name.replace(/ /g, '%20')
+        let new_name = name.replace(/ /g, '%20');
+       
+        var num = findNameIndex(name);
+        let img_text = HDS[num]["Img_tox"];
+        
+
+        // if (img_text == "lol") {
+        //     img_text = img_text.replace()
+        // }
+
         app.get(`/${new_name}_case`, (req, res) => res.render('cases-plants', {
             title: `${name}`,
             case_hds,
-            style: "plants.css"
+            style: "plants.css",
+            img_a: `${img_text}`,
+            path: "cases",
         }));
     }
 }
@@ -201,6 +228,7 @@ for (const index in HDS) {
             style: "plants.css",
             new_dictsArr,
             new_referencesArr,
+            path: "home",
         }));
     }
 }
