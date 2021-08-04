@@ -167,7 +167,7 @@ for (const index in HDS) {
 // console.log(referencesArr);
 
 app.get('/cases', (req, res) => res.render('cases', {
-    title: 'HDSTox',
+    title: 'Cases',
     cases,
     style: "style.css",
     path: "cases",
@@ -233,6 +233,11 @@ for (const index in HDS) {
     }
 }
 
+app.get('/about', (req, res) => res.render('about', {
+    title: 'About',
+    style: "style.css",
+    path: "about",
+}));
 
 app.use('/api', require('./routes/api/hds-data'))
 

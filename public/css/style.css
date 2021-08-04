@@ -24,8 +24,32 @@ h1 {
     font-size: 60px;
 }
 
+.about-title {
+    text-align: left;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.align-about {
+    text-align: left;
+}
+
+.border-about:hover {
+    transform: scale(1.00) !important;
+}
+
+a.about-link {
+    color:blue;
+}
+
 .nametext {
     display: inline-block;
+}
+
+a.about-link:hover {
+    cursor: pointer !important;
 }
 
 p {

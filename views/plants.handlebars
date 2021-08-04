@@ -26,7 +26,7 @@
     </div>
     <div>
         <h4>Summary</h4>
-        <p>{{new_HDS.Summary_tox}}</p>
+        <p>{{new_HDS.Summary_tox}} {{#ifnoteq new_HDS.LiverTox_summary "N/A"}}(Source: <a href = "{{new_HDS.Wiki_Link}}">Wiki</a>){{/ifnoteq}}</p>
     </div>
     <div>
         <h4>Evidence Level</h4>
@@ -60,11 +60,11 @@
     {{/if}}
     <div>
         <h4>Hepatotoxicity Description</h4>
-        <p>{{new_HDS.LiverTox_summary}}</p>
+        <p>{{new_HDS.LiverTox_summary}} {{#ifnoteq new_HDS.LiverTox_summary "N/A"}}(Source: <a href = "{{new_HDS.LiverTox_Link}}">LiverTox</a>){{/ifnoteq}}</p>
     </div>
     {{#each new_dictsArr}}
         <h4>{{title}}</h4>
-        <p>{{content}}</p>
+        <p>{{content}} {{#ifnoteq content ""}}(Source: <a href = "{{../new_HDS.Wiki_Link}}">Wiki</a>){{/ifnoteq}}</p>
     {{/each}}
     <div class = "public-info">
         <h4>Relevant Public Information</h4>
