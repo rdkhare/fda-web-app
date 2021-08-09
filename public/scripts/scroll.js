@@ -1,6 +1,5 @@
 function checkScroll(){
     var startY = $('.navbar').height() * 4;
-
     if($(window).scrollTop() > startY){
         $('.navbar').addClass("scrolled");
         $('.custom-ul').addClass("scrolled");
