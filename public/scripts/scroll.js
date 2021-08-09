@@ -1,14 +1,18 @@
 function checkScroll(){
-    var startY = $('.navbar').height() * 2;
+    var startY = $('.navbar').height() * 4;
 
     if($(window).scrollTop() > startY){
         $('.navbar').addClass("scrolled");
-        $('.navbar').addClass("border-bottom");
-        $('.navbar').addClass("border-success");
+        $('.custom-ul').addClass("scrolled");
+        $('.d-flex').addClass("scrolled");
+        $('.fas-l').addClass("scrolled");
+        $('.home').addClass("scrolled");
     }else{
         $('.navbar').removeClass("scrolled");
-        $('.navbar').removeClass("border-bottom");
-        $('.navbar').removeClass("border-success");
+        $('.custom-ul').removeClass("scrolled");
+        $('.d-flex').removeClass("scrolled");
+        $('.fas-l').removeClass("scrolled");
+        $('.home').removeClass("scrolled");
     }
 }
 

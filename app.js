@@ -81,6 +81,7 @@ app.get('/', (req, res) => res.render('index', {
     HDS,
     style: "style.css",
     path: "home",
+    name: "HDS"
 }));
 
 // End Homepage Route
@@ -171,6 +172,7 @@ app.get('/cases', (req, res) => res.render('cases', {
     cases,
     style: "style.css",
     path: "cases",
+    name: "Cases"
 }));
 
 function findNameIndex(name) {
@@ -203,7 +205,6 @@ for (const index in cases) {
             case_hds,
             style: "plants.css",
             img_a: `${img_text}`,
-            path: "cases",
         }));
     }
 }
@@ -228,7 +229,6 @@ for (const index in HDS) {
             style: "plants.css",
             new_dictsArr,
             new_referencesArr,
-            path: "home",
         }));
     }
 }

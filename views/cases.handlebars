@@ -18,6 +18,12 @@
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
+    $("#searchBar2").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("a.link-cases").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
     });
 </script> 
 {{!-- <div class="list-group" id="linkContainer"> --}}

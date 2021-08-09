@@ -1,7 +1,4 @@
-.custom-nav {
-    background:transparent;
-    color:black;
-}
+
 
 .custom-ul a{
     color:black;
@@ -19,22 +16,68 @@
 }
 
 .navbar {
-    -webkit-transition: all 0.6s ease-out;
-    -moz-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
-    -ms-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
     height:70px;
     font-family: 'Montserrat', sans-serif !important;
+    background-color: transparent;
 }
 
 .navbar.scrolled {
-    background: white;
-    color:black;
-    opacity: 1.0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
 }
 
-.navbar.border-bottom {
-    border-width: 2px !important;
-    transition: none !important;
+.custom-ul.scrolled a{
+    color:white;
+    opacity: 60%;
+}
+
+.custom-ul.scrolled a:hover{
+    color:white;
+    opacity: 100%;
+}
+
+.custom-ul.scrolled a.active{
+    color:white;
+    opacity: 100%;
+}
+
+.d-flex {
+    opacity: 0;
+}
+
+.d-flex.scrolled {
+    opacity: 1;
+}
+
+.fas-l.scrolled {
+    opacity: 1;
+    color:white;
+}
+.fas-l {
+    opacity: 0;
+}
+
+.home {
+    color:black;
+}
+
+.home.scrolled {
+    color:white;
+}
+
+.home:hover {
+    color:black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home.scrolled:hover {
+    color:white;
 }

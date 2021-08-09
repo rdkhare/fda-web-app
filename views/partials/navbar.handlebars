@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg fixed-top custom-nav">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand home" href="/">HDSTox</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse">
-      <ul class="navbar-nav custom-ul">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 custom-ul">
         <li class="nav-item">
           <a class="nav-link {{#ifEquals path "home"}}active{{/ifEquals}}" aria-current="page" href="/">Home</a>
         </li>
@@ -16,6 +16,18 @@
           <a class="nav-link {{#ifEquals path "about"}}active{{/ifEquals}}" href="/about">About</a>
         </li>
       </ul>
+      {{#ifEquals path "cases"}}
+      <form class="d-flex">
+          <input class="form-control me-2" id="searchBar2" type="search" placeholder="Search {{name}}">
+      </form>
+      <i class="fas fa-search fas-l"></i>
+      {{/ifEquals}}
+      {{#ifEquals path "home"}}
+      <form class="d-flex">
+          <input class="form-control me-2" id="searchBar2" type="search" placeholder="Search {{name}}">
+      </form>
+      <i class="fas fa-search fas-l"></i>
+      {{/ifEquals}}
     </div>
   </div>
 </nav>

@@ -12,7 +12,14 @@
 
  <script>
     $(document).ready(function(){
+    $("#searchbar").text = "";
     $("#searchBar").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("a.link-hds").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        }); 
+    });
+    $("#searchBar2").on("keyup", function() {
         var value = $(this).val().toLowerCase();
         $("a.link-hds").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
