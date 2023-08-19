@@ -1,3 +1,6 @@
+// adds/removes "scrolled" css class based on whether or not the page has been scrolled
+// navbar elements change
+
 function checkScroll(){
     var startY = $('.navbar').height() * 4;
     if($(window).scrollTop() > startY){

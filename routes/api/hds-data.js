@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const resultJSON = require('../../excel-convert');
 
-// API Requests
+// Handles all API Requests
+// Can access JSON file directly by typing in the url for website followed by /api/...
+// where ... can be replaced with the below routes (all-data, hds-data, cases-data, etc.)
+
 
 router.get('/all-data', function (req, res) {
     res.json(resultJSON);
