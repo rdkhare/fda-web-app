@@ -3,6 +3,7 @@ const exceljs = require('exceljs');
 var xslx_path = 'Data Files/hds_Raject.xlsx';
 // Function for reading XLSX, logging first column of first sheet
 
+// Parser.js used to test the parsing of excel sheet. Not actually used in the app to perform anything.
 
 function parseXSLX(path) {
     // Create an instance of workbook to load data into
