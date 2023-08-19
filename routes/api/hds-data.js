@@ -4,6 +4,13 @@ const resultJSON = require('../../excel-convert');
 
 // API Requests
 
+router.get('/all-data', function (req, res) {
+    res.json(resultJSON);
+
+});
+
+
+
 router.get('/hds-data', function(req, res) {
     res.json(resultJSON["HDS"]);
     // for (const index in resultJSON["HDS"]) {
