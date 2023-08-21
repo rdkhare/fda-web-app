@@ -1,6 +1,6 @@
 # fda-web-app
 
-Web application created during my internship with the FDA. Used NodeJS for the backend, Express Handlebars for the middleware/frontend, and Fly.io to deploy the website from GitHub. Currently available to the public at [http](https://hdstox.fly.dev/)
+Web application created during my internship with the FDA. Used NodeJS for the backend, Express Handlebars for the middleware/frontend, and Fly.io to deploy the website from GitHub. Currently available to the public at https://hdstox.fly.dev/
 
 ## Running the app locally
 
@@ -10,4 +10,4 @@ Web application created during my internship with the FDA. Used NodeJS for the b
 
 3. Run the command `npm start` to start the app.
    
-4. Open the app at [HTTP]localhost:3000/
+4. Open the app at http://localhost:3000/
